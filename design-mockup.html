@@ -51,7 +51,7 @@ body {
 
 .logo { display: flex; align-items: center; text-decoration: none; }
 .logo-img {
-  height: clamp(46px, 4vw, 60px);
+  height: clamp(54px, 5.5vw, 78px);
   width: auto;
   display: block;
 }
@@ -171,11 +171,12 @@ body {
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -1.5px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   background: linear-gradient(135deg, #19596c 0%, #22728e 30%, #3674a3 60%, #249c6c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  width: fit-content;
 }
 
 .hero-sub {
@@ -184,6 +185,11 @@ body {
   font-weight: 300;
   letter-spacing: 3px;
   text-transform: uppercase;
+  width: fit-content;
+  background: linear-gradient(135deg, #19596c 0%, #22728e 30%, #3674a3 60%, #249c6c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* ===== SECTIONS ===== */
@@ -1000,7 +1006,11 @@ body {
 <section class="section" id="contact">
   <h2 class="section-title" data-en="GET IN TOUCH" data-ja="これからもよろしくお願いします">GET IN TOUCH</h2>
   <p class="section-sub" data-en="We are open to any inquiry or feedback. Please feel free to drop us a note and our team will get back to you." data-ja="ご意見を是非お聞かせください。ご連絡いただけましたら、弊社チームより返信させていただきます。">We are open to any inquiry or feedback. Please feel free to drop us a note and our team will get back to you.</p>
-  <form class="contact-form" id="contact-form">
+  <form class="contact-form" id="contact-form" action="https://formsubmit.co/info@vnspire.com" method="POST">
+    <input type="hidden" name="_subject" value="V'NSPIRE Contact Form Submission">
+    <input type="hidden" name="_captcha" value="true">
+    <input type="hidden" name="_next" value="https://willfadeneva.github.io/vnspire/design-mockup.html">
+
     <div class="form-group">
       <label>Your Name <span class="required">*</span></label>
       <input type="text" name="name" required placeholder="Enter your name">
@@ -1361,14 +1371,10 @@ document.getElementById('lang-toggle-mobile').addEventListener('click', function
 });
 
 document.getElementById('contact-form')?.addEventListener('submit', function(e) {
-  e.preventDefault();
   const ans = parseInt(document.getElementById('captcha-input').value);
   const msg = document.getElementById('captcha-msg');
-  if (ans === n1 + n2) {
-    msg.style.display = 'none';
-    alert('Thank you! Your message has been sent.');
-    this.reset();
-  } else {
+  if (ans !== n1 + n2) {
+    e.preventDefault();
     msg.style.display = 'block';
   }
 });
