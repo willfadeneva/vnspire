@@ -160,10 +160,10 @@ body {
   position: relative;
   z-index: 2;
   text-align: left;
-  padding: 0 20px;
+  padding: 0;
   width: 100%;
   max-width: 800px;
-  margin-left: clamp(20px, 12vw, 160px);
+  margin-left: clamp(16px, 3vw, 40px);
 }
 
 .hero-heading {
@@ -688,12 +688,12 @@ body {
       <img src="/logo_vnspire.png" alt="V'NSPIRE" class="logo-img">
     </a>
     <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#values">Core Values</a></li>
-    <li><a href="#careers">Careers</a></li>
-    <li><a href="#contact">Contact Us</a></li>
-    <li class="lang-switcher"><a href="#" id="lang-toggle">🌐 EN / 日本語</a></li>
+    <li><a href="#home" data-en="Home" data-ja="ホーム">Home</a></li>
+    <li><a href="#services" data-en="Services" data-ja="サービス">Services</a></li>
+    <li><a href="#values" data-en="Core Values" data-ja="コアバリュー">Core Values</a></li>
+    <li><a href="#careers" data-en="Careers" data-ja="採用情報">Careers</a></li>
+    <li><a href="#contact" data-en="Contact Us" data-ja="お問い合わせ">Contact Us</a></li>
+    <li class="lang-switcher"><a href="#" id="lang-toggle" data-en="🌐 EN / 日本語" data-ja="🌐 日本語 / EN">🌐 EN / 日本語</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -709,12 +709,12 @@ body {
     <img src="/logo_vnspire.png" alt="V'NSPIRE" class="menu-logo">
     <span class="menu-tagline">Inspire to Innovate</span>
   </li>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#services">Services</a></li>
-  <li><a href="#values">Core Values</a></li>
-  <li><a href="#careers">Careers</a></li>
-  <li><a href="#contact">Contact Us</a></li>
-  <li class="lang-switcher"><a href="#" id="lang-toggle-mobile">🌐 EN / 日本語</a></li>
+  <li><a href="#home" data-en="Home" data-ja="ホーム">Home</a></li>
+  <li><a href="#services" data-en="Services" data-ja="サービス">Services</a></li>
+  <li><a href="#values" data-en="Core Values" data-ja="コアバリュー">Core Values</a></li>
+  <li><a href="#careers" data-en="Careers" data-ja="採用情報">Careers</a></li>
+  <li><a href="#contact" data-en="Contact Us" data-ja="お問い合わせ">Contact Us</a></li>
+  <li class="lang-switcher"><a href="#" id="lang-toggle-mobile" data-en="🌐 EN / 日本語" data-ja="🌐 日本語 / EN">🌐 EN / 日本語</a></li>
 </ul>
 
 <!-- ===== HERO ===== -->
@@ -770,8 +770,8 @@ body {
 
 <!-- ===== OTHER SERVICES ===== -->
 <section class="section">
-  <h2 class="section-title">OTHER SERVICES</h2>
-  <p class="section-sub">Beyond Drupal, we offer a comprehensive range of digital services to power your business.</p>
+  <h2 class="section-title" data-en="OTHER SERVICES" data-ja="その他のサービス">OTHER SERVICES</h2>
+  <p class="section-sub" data-en="Beyond Drupal, we offer a comprehensive range of digital services to power your business." data-ja="Drupal以外にも、ビジネスを強化する幅広いデジタルサービスを提供しています。">Beyond Drupal, we offer a comprehensive range of digital services to power your business.</p>
   <div class="services-grid">
     <div class="service-card">
       <div class="sc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#19596c" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
@@ -809,22 +809,22 @@ body {
 <!-- ===== WE NEVER STOP IMPROVING ===== -->
 <section class="stats-section">
   <div class="stats-inner">
-    <h2 class="stats-title">WE NEVER STOP IMPROVING</h2>
+    <h2 class="stats-title" data-en="WE NEVER STOP IMPROVING" data-ja="ずっと成長していきます">WE NEVER STOP IMPROVING</h2>
     <div class="stats-grid">
       <div class="stat-item">
         <div class="stat-number" data-target="1870">0</div>
-        <div class="stat-label">Heartbeat</div>
-        <p class="stat-desc">..and increasing. We will never stop improving</p>
+        <div class="stat-label" data-en="Heartbeat" data-ja="ハートビート">Heartbeat</div>
+        <p class="stat-desc" data-en="..and increasing. We will never stop improving" data-ja="。。増えています。ずっと成長していきます。">..and increasing. We will never stop improving</p>
       </div>
       <div class="stat-item">
         <div class="stat-number" data-target="103">0</div>
-        <div class="stat-label">Satisfied Customers</div>
-        <p class="stat-desc">Our Professional and dedicated team is on stand by to serve your every concern</p>
+        <div class="stat-label" data-en="Satisfied Customers" data-ja="満足した顧客">Satisfied Customers</div>
+        <p class="stat-desc" data-en="Our Professional and dedicated team is on stand by to serve your every concern." data-ja="弊社のプロフェッショナルかつ専用チームはどんな問題でも解決できます。">Our Professional and dedicated team is on stand by to serve your every concern.</p>
       </div>
       <div class="stat-item">
         <div class="stat-number" data-target="18000">0</div>
-        <div class="stat-label">Total Pages</div>
-        <p class="stat-desc">Our team has created vast majority of pages for different customers</p>
+        <div class="stat-label" data-en="Total Pages" data-ja="総ページ数">Total Pages</div>
+        <p class="stat-desc" data-en="Our team has created vast majority of pages for different customers" data-ja="いろいろなお客様のために様々のページを作成し提供させていただいております。">Our team has created vast majority of pages for different customers</p>
       </div>
     </div>
   </div>
@@ -832,13 +832,13 @@ body {
 
 <!-- ===== WHAT WE BELIEVE IN ===== -->
 <section class="section" id="values">
-  <h2 class="section-title">WHAT WE BELIEVE IN</h2>
-  <p class="section-sub">Our core values drive everything we do — from the way we work to the solutions we deliver.</p>
+  <h2 class="section-title" id="wwbi-title" data-en="WHAT WE BELIEVE IN" data-ja="モットー">WHAT WE BELIEVE IN</h2>
+  <p class="section-sub" data-en="Our core values drive everything we do — from the way we work to the solutions we deliver." data-ja="私たちのコアバリューは、働き方から提供するソリューションに至るまで、すべての原動力となっています。">Our core values drive everything we do — from the way we work to the solutions we deliver.</p>
   <div class="timeline">
     <div class="timeline-item">
       <div class="tl-content">
-        <h3>Innovation</h3>
-        <p>We constantly push boundaries and embrace emerging technologies to deliver forward-thinking solutions that give our clients a competitive edge.</p>
+        <h3 data-en="Innovation" data-ja="革新">Innovation</h3>
+        <p data-en="We constantly push boundaries and embrace emerging technologies to deliver forward-thinking solutions that give our clients a competitive edge." data-ja="私たちは常に限界に挑戦し、最新技術を取り入れ、お客様に競争優位性をもたらす先進的なソリューションを提供します。">We constantly push boundaries and embrace emerging technologies to deliver forward-thinking solutions that give our clients a competitive edge.</p>
       </div>
       <div class="tl-dot"></div>
       <div class="tl-spacer"></div>
@@ -847,14 +847,14 @@ body {
       <div class="tl-spacer"></div>
       <div class="tl-dot"></div>
       <div class="tl-content">
-        <h3>Quality</h3>
-        <p>We are committed to excellence in every project, ensuring robust, scalable, and maintainable solutions that stand the test of time.</p>
+        <h3 data-en="Quality" data-ja="品質">Quality</h3>
+        <p data-en="We are committed to excellence in every project, ensuring robust, scalable, and maintainable solutions that stand the test of time." data-ja="私たちはすべてのプロジェクトで卓越性を追求し、時代に耐える堅牢でスケーラブル、メンテナンス性の高いソリューションを保証します。">We are committed to excellence in every project, ensuring robust, scalable, and maintainable solutions that stand the test of time.</p>
       </div>
     </div>
     <div class="timeline-item">
       <div class="tl-content">
-        <h3>Collaboration</h3>
-        <p>We believe in the power of teamwork — working closely with our clients as partners to understand their vision and bring it to life.</p>
+        <h3 data-en="Collaboration" data-ja="協力">Collaboration</h3>
+        <p data-en="We believe in the power of teamwork — working closely with our clients as partners to understand their vision and bring it to life." data-ja="私たちはチームワークの力を信じています。クライアントとパートナーとして密に連携し、ビジョンを理解して現実のものにします。">We believe in the power of teamwork — working closely with our clients as partners to understand their vision and bring it to life.</p>
       </div>
       <div class="tl-dot"></div>
       <div class="tl-spacer"></div>
@@ -863,8 +863,8 @@ body {
       <div class="tl-spacer"></div>
       <div class="tl-dot"></div>
       <div class="tl-content">
-        <h3>Integrity</h3>
-        <p>Transparency, honesty, and ethical practices form the foundation of our relationships with clients, partners, and team members.</p>
+        <h3 data-en="Integrity" data-ja="誠実">Integrity</h3>
+        <p data-en="Transparency, honesty, and ethical practices form the foundation of our relationships with clients, partners, and team members." data-ja="透明性、誠実さ、倫理的な慣行が、クライアント、パートナー、チームメンバーとの関係の基盤です。">Transparency, honesty, and ethical practices form the foundation of our relationships with clients, partners, and team members.</p>
       </div>
     </div>
   </div>
@@ -872,14 +872,14 @@ body {
 
 <!-- ===== CAREERS ===== -->
 <section class="section" id="careers">
-  <h2 class="section-title">CAREERS</h2>
-  <p class="section-sub">Join our growing team. We're always looking for talented individuals who share our passion.</p>
+  <h2 class="section-title" id="careers-title" data-en="CAREERS" data-ja="採用情報">CAREERS</h2>
+  <p class="section-sub" data-en="Join our growing team. We're always looking for talented individuals who share our passion." data-ja="成長を続けるチームに参加しませんか。私たちと同じ情熱を持つ才能ある仲間を常に募集しています。">Join our growing team. We're always looking for talented individuals who share our passion.</p>
   <div class="careers-tabs">
-    <button class="careers-tab active" data-role="scrum-master">Agile Scrum Master</button>
-    <button class="careers-tab" data-role="ui-ux">UI/UX Developer</button>
-    <button class="careers-tab" data-role="backend">Backend Developer</button>
-    <button class="careers-tab" data-role="pm">Project Manager</button>
-    <button class="careers-tab" data-role="japanese">Japanese Language Expert</button>
+    <button class="careers-tab active" data-role="scrum-master" data-en="Agile Scrum Master" data-ja="アジャイルスクラムマスター">Agile Scrum Master</button>
+    <button class="careers-tab" data-role="ui-ux" data-en="UI/UX Developer" data-ja="UI/UX エンジニア">UI/UX Developer</button>
+    <button class="careers-tab" data-role="backend" data-en="Backend Developer" data-ja="バックエンド開発者">Backend Developer</button>
+    <button class="careers-tab" data-role="pm" data-en="Project Manager" data-ja="プロジェクトマネージャー">Project Manager</button>
+    <button class="careers-tab" data-role="japanese" data-en="Japanese Language Expert" data-ja="日本語翻訳者、通訳者">Japanese Language Expert</button>
   </div>
   <div class="careers-content">
     <div class="careers-detail active" id="role-scrum-master">
@@ -993,13 +993,13 @@ body {
       <a href="mailto:info@vnspire.com?subject=Job%20application%20for%20Japanese%20Language%20Expert" class="apply-link">Apply Now</a>
     </div>
   </div>
-  <p class="careers-email">Send resumes at <strong>info@vnspire.com</strong></p>
+  <p class="careers-email"><span class="lang-en">Send resumes at</span><span class="lang-ja" style="display:none">履歴書は</span> <strong>info@vnspire.com</strong></p>
 </section>
 
 <!-- ===== GET IN TOUCH ===== -->
 <section class="section" id="contact">
-  <h2 class="section-title">GET IN TOUCH</h2>
-  <p class="section-sub">We are open to any inquiry or feedback. Please feel free to drop us a note and our team will get back to you.</p>
+  <h2 class="section-title" data-en="GET IN TOUCH" data-ja="これからもよろしくお願いします">GET IN TOUCH</h2>
+  <p class="section-sub" data-en="We are open to any inquiry or feedback. Please feel free to drop us a note and our team will get back to you." data-ja="ご意見を是非お聞かせください。ご連絡いただけましたら、弊社チームより返信させていただきます。">We are open to any inquiry or feedback. Please feel free to drop us a note and our team will get back to you.</p>
   <form class="contact-form" id="contact-form">
     <div class="form-group">
       <label>Your Name <span class="required">*</span></label>
@@ -1012,11 +1012,202 @@ body {
     <div class="form-group">
       <label>Phone Number <span class="required">*</span></label>
       <div class="form-row">
-        <select>
-          <option value="+91">India (+91)</option>
-          <option value="+1">USA (+1)</option>
-          <option value="+44">UK (+44)</option>
+        <select name="country_code" required>
+          <option value="+93">Afghanistan (+93)</option>
+          <option value="+355">Albania (+355)</option>
+          <option value="+213">Algeria (+213)</option>
+          <option value="+376">Andorra (+376)</option>
+          <option value="+244">Angola (+244)</option>
+          <option value="+1-268">Antigua & Barbuda (+1-268)</option>
+          <option value="+54">Argentina (+54)</option>
+          <option value="+374">Armenia (+374)</option>
+          <option value="+61">Australia (+61)</option>
+          <option value="+43">Austria (+43)</option>
+          <option value="+994">Azerbaijan (+994)</option>
+          <option value="+1-242">Bahamas (+1-242)</option>
+          <option value="+973">Bahrain (+973)</option>
+          <option value="+880">Bangladesh (+880)</option>
+          <option value="+1-246">Barbados (+1-246)</option>
+          <option value="+375">Belarus (+375)</option>
+          <option value="+32">Belgium (+32)</option>
+          <option value="+501">Belize (+501)</option>
+          <option value="+229">Benin (+229)</option>
+          <option value="+975">Bhutan (+975)</option>
+          <option value="+591">Bolivia (+591)</option>
+          <option value="+387">Bosnia & Herzegovina (+387)</option>
+          <option value="+267">Botswana (+267)</option>
+          <option value="+55">Brazil (+55)</option>
+          <option value="+673">Brunei (+673)</option>
+          <option value="+359">Bulgaria (+359)</option>
+          <option value="+226">Burkina Faso (+226)</option>
+          <option value="+257">Burundi (+257)</option>
+          <option value="+855">Cambodia (+855)</option>
+          <option value="+237">Cameroon (+237)</option>
+          <option value="+1">Canada (+1)</option>
+          <option value="+238">Cape Verde (+238)</option>
+          <option value="+236">Central African Republic (+236)</option>
+          <option value="+235">Chad (+235)</option>
+          <option value="+56">Chile (+56)</option>
+          <option value="+86">China (+86)</option>
+          <option value="+57">Colombia (+57)</option>
+          <option value="+269">Comoros (+269)</option>
+          <option value="+242">Congo (+242)</option>
+          <option value="+243">Congo (DRC) (+243)</option>
+          <option value="+506">Costa Rica (+506)</option>
+          <option value="+385">Croatia (+385)</option>
+          <option value="+53">Cuba (+53)</option>
+          <option value="+357">Cyprus (+357)</option>
+          <option value="+420">Czech Republic (+420)</option>
+          <option value="+45">Denmark (+45)</option>
+          <option value="+253">Djibouti (+253)</option>
+          <option value="+1-767">Dominica (+1-767)</option>
+          <option value="+1-809">Dominican Republic (+1-809)</option>
+          <option value="+593">Ecuador (+593)</option>
+          <option value="+20">Egypt (+20)</option>
+          <option value="+503">El Salvador (+503)</option>
+          <option value="+240">Equatorial Guinea (+240)</option>
+          <option value="+291">Eritrea (+291)</option>
+          <option value="+372">Estonia (+372)</option>
+          <option value="+268">Eswatini (+268)</option>
+          <option value="+251">Ethiopia (+251)</option>
+          <option value="+679">Fiji (+679)</option>
+          <option value="+358">Finland (+358)</option>
+          <option value="+33">France (+33)</option>
+          <option value="+241">Gabon (+241)</option>
+          <option value="+220">Gambia (+220)</option>
+          <option value="+995">Georgia (+995)</option>
+          <option value="+49">Germany (+49)</option>
+          <option value="+233">Ghana (+233)</option>
+          <option value="+30">Greece (+30)</option>
+          <option value="+1-473">Grenada (+1-473)</option>
+          <option value="+502">Guatemala (+502)</option>
+          <option value="+224">Guinea (+224)</option>
+          <option value="+245">Guinea-Bissau (+245)</option>
+          <option value="+592">Guyana (+592)</option>
+          <option value="+509">Haiti (+509)</option>
+          <option value="+504">Honduras (+504)</option>
+          <option value="+36">Hungary (+36)</option>
+          <option value="+354">Iceland (+354)</option>
+          <option value="+91" selected>India (+91)</option>
+          <option value="+62">Indonesia (+62)</option>
+          <option value="+98">Iran (+98)</option>
+          <option value="+964">Iraq (+964)</option>
+          <option value="+353">Ireland (+353)</option>
+          <option value="+972">Israel (+972)</option>
+          <option value="+39">Italy (+39)</option>
+          <option value="+1-876">Jamaica (+1-876)</option>
           <option value="+81">Japan (+81)</option>
+          <option value="+962">Jordan (+962)</option>
+          <option value="+7">Kazakhstan (+7)</option>
+          <option value="+254">Kenya (+254)</option>
+          <option value="+686">Kiribati (+686)</option>
+          <option value="+965">Kuwait (+965)</option>
+          <option value="+996">Kyrgyzstan (+996)</option>
+          <option value="+856">Laos (+856)</option>
+          <option value="+371">Latvia (+371)</option>
+          <option value="+961">Lebanon (+961)</option>
+          <option value="+266">Lesotho (+266)</option>
+          <option value="+231">Liberia (+231)</option>
+          <option value="+218">Libya (+218)</option>
+          <option value="+423">Liechtenstein (+423)</option>
+          <option value="+370">Lithuania (+370)</option>
+          <option value="+352">Luxembourg (+352)</option>
+          <option value="+261">Madagascar (+261)</option>
+          <option value="+265">Malawi (+265)</option>
+          <option value="+60">Malaysia (+60)</option>
+          <option value="+960">Maldives (+960)</option>
+          <option value="+223">Mali (+223)</option>
+          <option value="+356">Malta (+356)</option>
+          <option value="+692">Marshall Islands (+692)</option>
+          <option value="+222">Mauritania (+222)</option>
+          <option value="+230">Mauritius (+230)</option>
+          <option value="+52">Mexico (+52)</option>
+          <option value="+691">Micronesia (+691)</option>
+          <option value="+373">Moldova (+373)</option>
+          <option value="+377">Monaco (+377)</option>
+          <option value="+976">Mongolia (+976)</option>
+          <option value="+382">Montenegro (+382)</option>
+          <option value="+212">Morocco (+212)</option>
+          <option value="+258">Mozambique (+258)</option>
+          <option value="+95">Myanmar (+95)</option>
+          <option value="+264">Namibia (+264)</option>
+          <option value="+674">Nauru (+674)</option>
+          <option value="+977">Nepal (+977)</option>
+          <option value="+31">Netherlands (+31)</option>
+          <option value="+64">New Zealand (+64)</option>
+          <option value="+505">Nicaragua (+505)</option>
+          <option value="+227">Niger (+227)</option>
+          <option value="+234">Nigeria (+234)</option>
+          <option value="+850">North Korea (+850)</option>
+          <option value="+389">North Macedonia (+389)</option>
+          <option value="+47">Norway (+47)</option>
+          <option value="+968">Oman (+968)</option>
+          <option value="+92">Pakistan (+92)</option>
+          <option value="+680">Palau (+680)</option>
+          <option value="+970">Palestine (+970)</option>
+          <option value="+507">Panama (+507)</option>
+          <option value="+675">Papua New Guinea (+675)</option>
+          <option value="+595">Paraguay (+595)</option>
+          <option value="+51">Peru (+51)</option>
+          <option value="+63">Philippines (+63)</option>
+          <option value="+48">Poland (+48)</option>
+          <option value="+351">Portugal (+351)</option>
+          <option value="+974">Qatar (+974)</option>
+          <option value="+40">Romania (+40)</option>
+          <option value="+7">Russia (+7)</option>
+          <option value="+250">Rwanda (+250)</option>
+          <option value="+1-869">Saint Kitts & Nevis (+1-869)</option>
+          <option value="+1-758">Saint Lucia (+1-758)</option>
+          <option value="+1-784">Saint Vincent & Grenadines (+1-784)</option>
+          <option value="+685">Samoa (+685)</option>
+          <option value="+378">San Marino (+378)</option>
+          <option value="+239">Sao Tome & Principe (+239)</option>
+          <option value="+966">Saudi Arabia (+966)</option>
+          <option value="+221">Senegal (+221)</option>
+          <option value="+381">Serbia (+381)</option>
+          <option value="+248">Seychelles (+248)</option>
+          <option value="+232">Sierra Leone (+232)</option>
+          <option value="+65">Singapore (+65)</option>
+          <option value="+421">Slovakia (+421)</option>
+          <option value="+386">Slovenia (+386)</option>
+          <option value="+677">Solomon Islands (+677)</option>
+          <option value="+252">Somalia (+252)</option>
+          <option value="+27">South Africa (+27)</option>
+          <option value="+82">South Korea (+82)</option>
+          <option value="+211">South Sudan (+211)</option>
+          <option value="+34">Spain (+34)</option>
+          <option value="+94">Sri Lanka (+94)</option>
+          <option value="+249">Sudan (+249)</option>
+          <option value="+597">Suriname (+597)</option>
+          <option value="+46">Sweden (+46)</option>
+          <option value="+41">Switzerland (+41)</option>
+          <option value="+963">Syria (+963)</option>
+          <option value="+886">Taiwan (+886)</option>
+          <option value="+992">Tajikistan (+992)</option>
+          <option value="+255">Tanzania (+255)</option>
+          <option value="+66">Thailand (+66)</option>
+          <option value="+670">Timor-Leste (+670)</option>
+          <option value="+228">Togo (+228)</option>
+          <option value="+676">Tonga (+676)</option>
+          <option value="+1-868">Trinidad & Tobago (+1-868)</option>
+          <option value="+216">Tunisia (+216)</option>
+          <option value="+90">Turkey (+90)</option>
+          <option value="+993">Turkmenistan (+993)</option>
+          <option value="+688">Tuvalu (+688)</option>
+          <option value="+256">Uganda (+256)</option>
+          <option value="+380">Ukraine (+380)</option>
+          <option value="+971">United Arab Emirates (+971)</option>
+          <option value="+44">United Kingdom (+44)</option>
+          <option value="+1">United States (+1)</option>
+          <option value="+598">Uruguay (+598)</option>
+          <option value="+998">Uzbekistan (+998)</option>
+          <option value="+678">Vanuatu (+678)</option>
+          <option value="+379">Vatican City (+379)</option>
+          <option value="+58">Venezuela (+58)</option>
+          <option value="+84">Vietnam (+84)</option>
+          <option value="+967">Yemen (+967)</option>
+          <option value="+260">Zambia (+260)</option>
+          <option value="+263">Zimbabwe (+263)</option>
         </select>
         <input type="tel" name="phone" required placeholder="Enter your phone number">
       </div>
@@ -1033,7 +1224,7 @@ body {
         <span id="captcha-msg" style="font-size:12px;color:#e74c3c;display:none;">Incorrect</span>
       </div>
     </div>
-    <button type="submit" class="btn-submit">Send Message</button>
+    <button type="submit" class="btn-submit" id="submit-btn" data-en="Send Message" data-ja="送信">Send Message</button>
   </form>
 </section>
 
@@ -1041,22 +1232,22 @@ body {
 <footer class="footer">
   <div class="footer-inner">
     <div>
-      <h3>About V'NSPIRE</h3>
+      <h3 data-en="About V'NSPIRE" data-ja="V'NSPIRE について">About V'NSPIRE</h3>
       <p>True to its name, V'nspire inspires us to transform your digital dreams into a reality. We craft tailor made solutions for all your needs, be it building multilingual websites, ecommerce sites or help big businesses do bigger things – we help your brand shine through. A one stop shop for all your different types of digital requirements, we excel in providing reliable and customized solutions.</p>
     </div>
     <div>
-      <h3>Quick Links</h3>
-      <a href="/privacy-policy.html">Privacy Policy</a>
-      <a href="/terms-conditions.html">Terms & Conditions</a>
-      <a href="#">Contact Us</a>
+      <h3 data-en="Quick Links" data-ja="リンク">Quick Links</h3>
+      <a href="/privacy-policy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+      <a href="/terms-conditions.html" data-en="Terms & Conditions" data-ja="ご利用条件">Terms & Conditions</a>
+      <a href="#contact" data-en="Contact Us" data-ja="お問い合わせ">Contact Us</a>
     </div>
     <div>
-      <h3>Contact Us</h3>
+      <h3 data-en="Contact Us" data-ja="お問い合わせ">Contact Us</h3>
       <p>G-30, Second Floor,<br>South City - 2, Gurugram,<br>Haryana - 122001, India</p>
       <p style="margin-top:8px;">+91-981-018-8761</p>
       <div class="footer-socials">
         <a href="https://facebook.com/vnspiregurugram" target="_blank" rel="noopener" title="Facebook">f</a>
-        <a href="https://www.linkedin.com/company/v-nspire-solutions-pvt-ltd/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a href="https://www.linkedin.com/company/v-nspire-solutions-pvt-ltd/?viewAsMember=true" target="_blank" rel="noopener" title="LinkedIn">in</a>
       </div>
     </div>
   </div>
@@ -1140,6 +1331,34 @@ const n1 = Math.floor(Math.random() * 10) + 1;
 const n2 = Math.floor(Math.random() * 10) + 1;
 document.getElementById('captcha-num1').textContent = n1;
 document.getElementById('captcha-num2').textContent = n2;
+
+// Language toggle
+let currentLang = 'en';
+function switchLanguage(lang) {
+  currentLang = lang;
+  document.querySelectorAll('[data-en]').forEach(el => {
+    if (['INPUT','TEXTAREA','SELECT'].includes(el.tagName)) return;
+    if (el.id === 'lang-toggle' || el.id === 'lang-toggle-mobile') {
+      el.textContent = el.dataset[lang];
+      return;
+    }
+    if (el.dataset[lang]) {
+      el.textContent = el.dataset[lang];
+    }
+  });
+  document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+  document.querySelectorAll('.lang-ja').forEach(el => el.style.display = lang === 'ja' ? '' : 'none');
+  document.getElementById('lang-toggle').textContent = document.getElementById('lang-toggle').dataset[lang];
+  document.getElementById('lang-toggle-mobile').textContent = document.getElementById('lang-toggle-mobile').dataset[lang];
+}
+document.getElementById('lang-toggle').addEventListener('click', function(e) {
+  e.preventDefault();
+  switchLanguage(currentLang === 'en' ? 'ja' : 'en');
+});
+document.getElementById('lang-toggle-mobile').addEventListener('click', function(e) {
+  e.preventDefault();
+  switchLanguage(currentLang === 'en' ? 'ja' : 'en');
+});
 
 document.getElementById('contact-form')?.addEventListener('submit', function(e) {
   e.preventDefault();
