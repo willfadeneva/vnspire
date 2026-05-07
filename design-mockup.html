@@ -146,6 +146,16 @@ body {
   display: none !important;
   -webkit-appearance: none;
 }
+.hero-video-bg::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+.hero-video-bg::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+.hero-video-bg::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+}
 
 .hero::after {
   content: '';
@@ -163,7 +173,7 @@ body {
   padding: 0;
   width: 100%;
   max-width: 600px;
-  margin-left: clamp(8px, 1.5vw, 20px);
+  margin-left: clamp(4px, 0.75vw, 10px);
 }
 
 .hero-heading {
@@ -725,7 +735,7 @@ body {
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="home">
-  <video class="hero-video-bg" autoplay muted loop playsinline webkit-playsinline x5-playsinline disablePictureInPicture>
+  <video class="hero-video-bg" id="hero-video" autoplay muted loop playsinline webkit-playsinline x5-playsinline disablePictureInPicture controlslist="nodownload noremoteplayback nofullscreen">
     <source src="/hero.mp4" type="video/mp4">
   </video>
   <div class="hero-content">
@@ -1276,6 +1286,19 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('scrolled');
   }
 });
+
+// Force video autoplay on mobile
+const heroVideo = document.getElementById('hero-video');
+if (heroVideo) {
+  const playVideo = () => {
+    heroVideo.play().catch(() => {});
+  };
+  playVideo();
+  document.addEventListener('touchstart', playVideo, { once: true });
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) heroVideo.play().catch(() => {});
+  });
+}
 
 // Hamburger menu
 const hamburger = document.getElementById('hamburger');
