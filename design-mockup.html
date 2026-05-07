@@ -172,8 +172,8 @@ body {
   text-align: left;
   padding: 0;
   width: 100%;
-  max-width: 600px;
-  margin-left: clamp(4px, 0.75vw, 10px);
+  max-width: 540px;
+  margin-left: clamp(2px, 0.3vw, 4px);
 }
 
 .hero-heading {
@@ -1022,15 +1022,15 @@ body {
     <input type="hidden" name="_next" value="">
 
     <div class="form-group">
-      <label>Your Name <span class="required">*</span></label>
-      <input type="text" name="name" required placeholder="Enter your name">
+      <label data-en="Your Name" data-ja="お名前">Your Name <span class="required">*</span></label>
+      <input type="text" name="name" required placeholder="Enter your name" data-en-placeholder="Enter your name" data-ja-placeholder="名前を入力">
     </div>
     <div class="form-group">
-      <label>Your Email <span class="required">*</span></label>
-      <input type="email" name="email" required placeholder="Enter your email">
+      <label data-en="Your Email" data-ja="メールアドレス">Your Email <span class="required">*</span></label>
+      <input type="email" name="email" required placeholder="Enter your email" data-en-placeholder="Enter your email" data-ja-placeholder="メールを入力">
     </div>
     <div class="form-group">
-      <label>Phone Number <span class="required">*</span></label>
+      <label data-en="Phone Number" data-ja="電話番号">Phone Number <span class="required">*</span></label>
       <div class="form-row">
         <select name="country_code" required>
           <option value="+93">Afghanistan (+93)</option>
@@ -1229,19 +1229,19 @@ body {
           <option value="+260">Zambia (+260)</option>
           <option value="+263">Zimbabwe (+263)</option>
         </select>
-        <input type="tel" name="phone" required placeholder="Enter your phone number">
+        <input type="tel" name="phone" required placeholder="Enter your phone number" data-en-placeholder="Enter your phone number" data-ja-placeholder="電話番号を入力">
       </div>
     </div>
     <div class="form-group">
-      <label>Message <span class="required">*</span></label>
-      <textarea name="message" required placeholder="Write your message here..."></textarea>
+      <label data-en="Message" data-ja="メッセージ">Message <span class="required">*</span></label>
+      <textarea name="message" required placeholder="Write your message here..." data-en-placeholder="Write your message here..." data-ja-placeholder="メッセージを入力してください"></textarea>
     </div>
     <div class="form-group">
-      <label>Verification <span class="required">*</span></label>
+      <label data-en="Verification" data-ja="認証">Verification <span class="required">*</span></label>
       <div style="display:flex;align-items:center;gap:12px;background:#f5f5f7;padding:12px 16px;border-radius:8px;border:1px solid rgba(25,89,108,0.06);">
-        <span style="font-size:13px;color:rgba(26,26,46,0.4);white-space:nowrap;">What is <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span>?</span>
+        <span style="font-size:13px;color:rgba(26,26,46,0.4);white-space:nowrap;" data-en="What is" data-ja="計算結果は？"><span class="lang-en">What is</span><span class="lang-ja" style="display:none">計算結果は？</span> <span id="captcha-num1">5</span> + <span id="captcha-num2">3</span>?</span>
         <input type="number" id="captcha-input" required style="width:80px;padding:8px 12px;border:1px solid rgba(25,89,108,0.1);border-radius:6px;font-size:14px;outline:none;" placeholder="?">
-        <span id="captcha-msg" style="font-size:12px;color:#e74c3c;display:none;">Incorrect</span>
+        <span id="captcha-msg" style="font-size:12px;color:#e74c3c;display:none;" data-en="Incorrect" data-ja="不正解">Incorrect</span>
       </div>
     </div>
     <button type="submit" class="btn-submit" id="submit-btn" data-en="Send Message" data-ja="送信">Send Message</button>
@@ -1378,6 +1378,10 @@ function switchLanguage(lang) {
     if (el.dataset[lang]) {
       el.textContent = el.dataset[lang];
     }
+  });
+  // Swap placeholders on inputs/textareas
+  document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+    el.placeholder = el.dataset[lang + '-placeholder'] || el.placeholder;
   });
   document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
   document.querySelectorAll('.lang-ja').forEach(el => el.style.display = lang === 'ja' ? '' : 'none');
