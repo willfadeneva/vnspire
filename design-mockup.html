@@ -173,7 +173,12 @@ body {
   padding: 0;
   width: 100%;
   max-width: 600px;
-  margin-left: 400px;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .cta-content {
+    margin-left: 400px;
+  }
 }
 
 /* Hero decorative shapes */
@@ -1412,7 +1417,7 @@ function switchLanguage(lang) {
   });
   // Swap placeholders on inputs/textareas
   document.querySelectorAll('[data-en-placeholder]').forEach(el => {
-    el.placeholder = el.dataset[lang + '-placeholder'] || el.placeholder;
+    el.placeholder = el.getAttribute('data-' + lang + '-placeholder') || el.placeholder;
   });
   document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
   document.querySelectorAll('.lang-ja').forEach(el => el.style.display = lang === 'ja' ? '' : 'none');
