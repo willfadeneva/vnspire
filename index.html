@@ -584,6 +584,25 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(25,89,108,0.25);
 }
+.btn-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
+}
+.form-status {
+  max-width: 600px;
+  margin: 0 auto 24px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.form-status.success {
+  color: #176b4a;
+  background: rgba(36,156,108,0.1);
+  border: 1px solid rgba(36,156,108,0.25);
+}
 
 /* ===== FOOTER ===== */
 .footer {
@@ -1057,10 +1076,12 @@ body {
 <section class="section" id="contact">
   <h2 class="section-title" data-en="GET IN TOUCH" data-ja="これからもよろしくお願いします">GET IN TOUCH</h2>
   <p class="section-sub" data-en="We are open to any inquiry or feedback. Please feel free to drop us a note and our team will get back to you." data-ja="ご意見を是非お聞かせください。ご連絡いただけましたら、弊社チームより返信させていただきます。">We are open to any inquiry or feedback. Please feel free to drop us a note and our team will get back to you.</p>
-  <form class="contact-form" id="contact-form" action="https://formsubmit.co/info@vnspire.com" method="POST">
+  <p class="form-status success" id="contact-success" role="status" hidden data-en="Thank you. Your message has been sent successfully." data-ja="ありがとうございます。メッセージは正常に送信されました。">Thank you. Your message has been sent successfully.</p>
+  <form class="contact-form" id="contact-form" action="https://formsubmit.co/info@vnspire.com" method="POST" accept-charset="UTF-8">
     <input type="hidden" name="_subject" value="V'NSPIRE Contact Form Submission">
     <input type="hidden" name="_captcha" value="true">
-    <input type="hidden" name="_next" value="">
+    <input type="hidden" name="_next" value="https://www.vnspire.com/?contact=success#contact">
+    <input type="hidden" name="_url" value="https://www.vnspire.com/">
 
     <div class="form-group">
       <label data-en="Your Name" data-ja="お名前">Your Name <span class="required">*</span></label>
@@ -1438,13 +1459,40 @@ document.getElementById('lang-toggle-mobile').addEventListener('click', function
   switchLanguage(currentLang === 'en' ? 'ja' : 'en');
 });
 
-document.getElementById('contact-form')?.addEventListener('submit', function(e) {
-  const ans = parseInt(document.getElementById('captcha-input').value);
-  const msg = document.getElementById('captcha-msg');
+const contactForm = document.getElementById('contact-form');
+const captchaInput = document.getElementById('captcha-input');
+const captchaMessage = document.getElementById('captcha-msg');
+const submitButton = document.getElementById('submit-btn');
+const contactSuccess = document.getElementById('contact-success');
+
+if (new URLSearchParams(window.location.search).get('contact') === 'success') {
+  contactSuccess.hidden = false;
+  history.replaceState(null, '', window.location.pathname + window.location.hash);
+}
+
+captchaInput?.addEventListener('input', function() {
+  captchaMessage.style.display = 'none';
+  this.removeAttribute('aria-invalid');
+});
+
+contactForm?.addEventListener('submit', function(e) {
+  const ans = Number.parseInt(captchaInput.value, 10);
   if (ans !== n1 + n2) {
     e.preventDefault();
-    msg.style.display = 'block';
+    captchaMessage.style.display = 'block';
+    captchaInput.setAttribute('aria-invalid', 'true');
+    captchaInput.focus();
+    return;
   }
+
+  captchaMessage.style.display = 'none';
+  submitButton.disabled = true;
+  submitButton.textContent = currentLang === 'ja' ? '送信中…' : 'Sending…';
+});
+
+window.addEventListener('pageshow', function() {
+  submitButton.disabled = false;
+  submitButton.textContent = currentLang === 'ja' ? '送信' : 'Send Message';
 });
 </script>
 </body>
